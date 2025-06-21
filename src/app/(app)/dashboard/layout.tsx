@@ -2,16 +2,16 @@ import { Metadata } from "next";
 import { cookies } from "next/headers";
 import React, { Suspense } from "react";
 import { Refine, GitHubBanner } from "@refinedev/core";
-import { DevtoolsProvider } from "@providers/devtools";
+import { DevtoolsProvider } from "@/providers/devtools";
 import { RefineKbar, RefineKbarProvider } from "@refinedev/kbar";
 import { ThemedTitleV2, useNotificationProvider } from "@refinedev/antd";
 import routerProvider from "@refinedev/nextjs-router";
 
-import { dataProvider } from "@providers/data-provider";
 import { AntdRegistry } from "@ant-design/nextjs-registry";
 import "@refinedev/antd/dist/reset.css";
-import { AppIcon } from "@components/app-icon";
-import { ColorModeContextProvider } from "@contexts/color-mode";
+import { AppIcon } from "@/components/app-icon";
+import { ColorModeContextProvider } from "@/contexts/color-mode";
+import { dataProvider } from "@/providers/data-provider";
 
 export const metadata: Metadata = {
   title: "Refine",

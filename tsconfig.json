@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "ES2017",
     "lib": [
       "dom",
       "dom.iterable",
@@ -9,31 +9,27 @@
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
-    "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,
     "module": "esnext",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "types": [
-      "node"
-    ],
+    "incremental": true,
     "plugins": [
       {
         "name": "next"
       }
     ],
     "paths": {
-      "@*": [
+      "@/*": [
         "./src/*"
       ],
-      "@pages/*": [
-        "./pages/*"
+      "@payload-config": [
+        "./src/payload.config.ts"
       ]
-    },
-    "incremental": true
+    }
   },
   "include": [
     "next-env.d.ts",
